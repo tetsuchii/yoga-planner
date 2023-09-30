@@ -1,4 +1,11 @@
-import { FlatList, Text, View, Image, Platform } from "react-native";
+import {
+  FlatList,
+  Text,
+  View,
+  Image,
+  Platform,
+  Dimensions,
+} from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import globalStyles from "../../style";
 import { useEffect, useState } from "react";
@@ -32,6 +39,10 @@ export default function Home() {
     //....
   }, []);
 
+  const makeGrid = () => {
+    return Math.floor(Dimensions.get("window").width / 400);
+  };
+
   return (
     <SafeAreaProvider>
       <View style={globalStyles.container}>
@@ -44,8 +55,11 @@ export default function Home() {
         >
           <FlatList
             data={options}
-            style={{ marginBottom: Platform.OS == "ios" ? 80 : 0 }}
-            numColumns={Platform.OS == "web" ? options.length : 1}
+            style={{
+              marginBottom: Platform.OS == "ios" ? 80 : 0,
+              alignSelf: Platform.OS === "web" ? "center" : "auto",
+            }}
+            numColumns={Platform.OS == "web" ? makeGrid() : 1}
             renderItem={({ item }) => (
               <View style={globalStyles.card}>
                 <Image

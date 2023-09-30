@@ -16,6 +16,7 @@ export default StyleSheet.create({
     color: "green",
   },
   card: {
+    minWidth: Platform.OS === "web" ? 400 : null,
     margin: 10,
     borderRadius: 7,
     backgroundColor: "white",
