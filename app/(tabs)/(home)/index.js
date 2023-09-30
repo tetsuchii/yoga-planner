@@ -80,7 +80,7 @@ export default function Home() {
                   </View>
                 </View>
                 <FlatList
-                  style={globalStyles.row}
+                  style={globalStyles.rowTags}
                   data={item.tags}
                   renderItem={({ item }) => (
                     <Text style={globalStyles.cardText}>#{item} </Text>

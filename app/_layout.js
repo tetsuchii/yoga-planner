@@ -1,7 +1,6 @@
-import { Slot } from "expo-router";
 import React, { useState } from "react";
 import { Stack } from "expo-router";
-
+import "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Header from "../components/Header";
 import { useGlobalState } from "../app/store";

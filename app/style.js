@@ -10,13 +10,14 @@ export default StyleSheet.create({
     maxWidth: 550,
   },
   webContent: {
+    flex: 1,
     width: Dimensions.get("window").width,
   },
   text: {
     color: "green",
   },
   card: {
-    minWidth: Platform.OS === "web" ? 400 : null,
+    minWidth: Platform.OS === "web" ? 360 : null,
     margin: 10,
     borderRadius: 7,
     backgroundColor: "white",
@@ -35,6 +36,11 @@ export default StyleSheet.create({
     maxWidth: 500,
     borderRadius: 7,
     marginHorizontal: 5,
+  },
+  profileImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 100 / 2,
   },
   cardText: { color: "#0d3954" },
   cardTitle: {
@@ -57,11 +63,31 @@ export default StyleSheet.create({
     width: "100%",
     justifyContent: "space-between",
   },
-  row: {
+  rowTags: {
     width: "100%",
     marginLeft: 10,
     flexDirection: "row",
     flexWrap: "wrap",
     alignItems: "flex-start",
+  },
+  row: {
+    marginTop: 15,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 30,
+  },
+  profileButton: {
+    marginHorizontal: 10,
+    flexDirection: "row",
+    gap: 10,
+    borderRadius: 7,
+    backgroundColor: "#f2f2f2",
+    padding: 10,
+    marginBottom: 10,
+    shadowColor: "#ccc",
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
   },
 });

@@ -8,6 +8,10 @@ export default () => {
         name="profile"
         options={{ headerShown: false, headerTransparent: true }}
       />
+      <Stack.Screen
+        name="settings"
+        options={{ headerShown: false, headerTransparent: true }}
+      />
     </Stack>
   );
 };
