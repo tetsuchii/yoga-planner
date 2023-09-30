@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet, Dimensions } from "react-native";
 
 export default StyleSheet.create({
   container: {
@@ -6,9 +6,11 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   content: {
-    flex: 1,
     width: "100%",
     maxWidth: 550,
+  },
+  webContent: {
+    width: Dimensions.get("window").width,
   },
   text: {
     color: "green",

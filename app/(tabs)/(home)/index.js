@@ -1,4 +1,4 @@
-import { FlatList, Text, View, Image } from "react-native";
+import { FlatList, Text, View, Image, Platform } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import globalStyles from "../../style";
 import { useEffect, useState } from "react";
@@ -35,9 +35,17 @@ export default function Home() {
   return (
     <SafeAreaProvider>
       <View style={globalStyles.container}>
-        <View style={globalStyles.content}>
+        <View
+          style={
+            Platform.OS == "web"
+              ? globalStyles.webContent
+              : globalStyles.content
+          }
+        >
           <FlatList
             data={options}
+            style={{ marginBottom: Platform.OS == "ios" ? 80 : 0 }}
+            numColumns={Platform.OS == "web" ? options.length : 1}
             renderItem={({ item }) => (
               <View style={globalStyles.card}>
                 <Image

@@ -38,7 +38,7 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 8,
+                marginTop: 15,
                 backgroundColor: "transparent",
               }}
             >
@@ -63,7 +63,7 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 8,
+                marginTop: 15,
                 backgroundColor: "transparent",
               }}
             >
@@ -76,7 +76,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="(profile)"
         options={{
           title: "",
           headerShown: false,
@@ -88,7 +88,7 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 8,
+                marginTop: 15,
                 backgroundColor: "transparent",
               }}
             >

@@ -15,7 +15,7 @@ export default function Header() {
   });
 
   useState(() => {
-    if (Platform.OS === "web") {
+    if (Platform.OS != "ios") {
       loadFontsAsync;
     }
   }, []);
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     fontSize: 26,
     textAlign: "center",
     fontFamily: "Cooper-Black",
-    marginTop: Platform.OS === "ios" ? 50 : 10,
+    marginTop: Platform.OS === "web" ? 10 : 50,
   },
 });
