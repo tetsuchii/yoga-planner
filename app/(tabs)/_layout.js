@@ -9,6 +9,7 @@ export default function TabsLayout() {
     <Tabs
       initialRouteName="index"
       screenOptions={{
+        tabBarActiveTintColor: "#546aa6",
         tabBarStyle: Platform.OS === "ios" && {
           backgroundColor: "white",
         },
@@ -19,6 +20,17 @@ export default function TabsLayout() {
           <View
             style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}
             intensity={95}
+          >
+            <BottomTabBar {...props} />
+          </View>
+        ) : Platform.OS === "web" ? (
+          <View
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: 0,
+            }}
           >
             <BottomTabBar {...props} />
           </View>
@@ -38,7 +50,7 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 15,
+                marginTop: Platform.OS === "web" ? 0 : 15,
                 backgroundColor: "transparent",
               }}
             >
@@ -63,7 +75,8 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 15,
+                marginTop: Platform.OS === "web" ? 0 : 15,
+
                 backgroundColor: "transparent",
               }}
             >
@@ -88,7 +101,7 @@ export default function TabsLayout() {
               style={{
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: 15,
+                marginTop: Platform.OS === "web" ? 0 : 15,
                 backgroundColor: "transparent",
               }}
             >

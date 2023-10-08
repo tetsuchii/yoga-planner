@@ -4,6 +4,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    marginTop: Platform.OS === "web" ? 60 : 0,
   },
   content: {
     width: "100%",

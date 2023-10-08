@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     height: Platform.OS === "web" ? 60 : 100,
   },
   headerTitle: {
-    color: "#cddad8",
+    color: "#f2f2f2",
     fontSize: 26,
     textAlign: "center",
     fontFamily: "Cooper-Black",
